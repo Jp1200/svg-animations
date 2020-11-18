@@ -7,15 +7,31 @@ body {
   text-align: center;
 }
 .btn {
-  width: 12em;
-  height: 7em;
+  margin-right: 25px;
+  margin-left: 25px;
+  font-weight: 700;
+  font-family: sans-serif;
+  width: 160px;
+  height: 55px;
+  font-size: 22pt;
   border-radius: 30pt;
   border: 2px solid #000;
   color: #000;
-  background-color: linear-gradient(#fff, whitesmoke);
+  background-color: #fff;
+  transition: all 1s ease-in-out;
 }
-#load_icon {
-  animation: load 5s ease-in infinite;
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #7580f4;
+  box-shadow: 4px 2px 4px #000;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+#load_icon_progress {
+  animation: load 5s ease-in-out infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
