@@ -35,6 +35,11 @@ body {
   transform-origin: center;
   transform-box: fill-box;
 }
+.scale_icon_progress {
+  animation: load2 1s ease-in-out linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
 @keyframes load {
   from {
     transform: rotateZ(0deg);
@@ -44,10 +49,13 @@ body {
   }
 }
 @keyframes load2 {
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
-    transform: scale(1.1);
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 }
