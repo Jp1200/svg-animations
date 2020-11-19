@@ -35,8 +35,8 @@ body {
   transform-origin: center;
   transform-box: fill-box;
 }
-.scale_icon_progress {
-  animation: load2 1s ease-in-out linear;
+#scale_icon_progress {
+  animation: load2 1s ease-in-out infinite;
   transform-origin: center;
   transform-box: fill-box;
 }

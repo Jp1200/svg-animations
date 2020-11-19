@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function(){
-    function whichTransitionEvent(){
-        var t,
-            el = document.createElement("fakeelement");
+    // function whichTransitionEvent(){
+    //     var t,
+    //         el = document.createElement("fakeelement");
       
-        var transitions = {
-          "transition"      : "transitionend",
-          "OTransition"     : "oTransitionEnd",
-          "MozTransition"   : "transitionend",
-          "WebkitTransition": "webkitTransitionEnd"
-        }
+    //     var transitions = {
+    //       "transition"      : "transitionend",
+    //       "OTransition"     : "oTransitionEnd",
+    //       "MozTransition"   : "transitionend",
+    //       "WebkitTransition": "webkitTransitionEnd"
+    //     }
       
-        for (t in transitions){
-          if (el.style[t] !== undefined){
-            return transitions[t];
-          }
-        }
-      }
-    var transitionEvent = whichTransitionEvent();
+    //     for (t in transitions){
+    //       if (el.style[t] !== undefined){
+    //         return transitions[t];
+    //       }
+    //     }
+    //   }
+    // var transitionEvent = whichTransitionEvent();
     console.log("javascript loaded...")
     const ball1 = document.getElementById("Vector_55");
     const icon = document.getElementById("load_icon");
@@ -29,24 +29,17 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log("clicked")
     })
     btn2.addEventListener("click", ()=>{
+        
         const vectors = Array.prototype.slice.call(balls)
-        function after(elem){
-            
-                
-                elem.className = "";
-                elem.removeEventListener(transitionEvent, start);
-                
-            
-        }
-        function start(event){
+        console.log(vectors);
             vectors.forEach(i => {
-                console.log(i)
-                i.className = "scale_icon_progress";
-                i.addEventListener(transitionEvent, after(i) )
+                
+                i.id = "scale_icon_progress";
+                
                 
             });
-        }
-       start();
+        
+       
         
     });
    
