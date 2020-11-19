@@ -41,11 +41,17 @@ body {
   transform-box: fill-box;
 }
 @keyframes load {
-  from {
+  0% {
     transform: rotateZ(0deg);
+    opacity: 1;
   }
-  to {
+  50% {
     transform: rotateZ(360deg);
+    opacity: 0.06;
+  }
+  100% {
+    transform: rotateZ(720deg);
+    opacity: 1;
   }
 }
 @keyframes load2 {
